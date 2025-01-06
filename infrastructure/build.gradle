@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.mardenluiz'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(path: ":application")
+    implementation project(path: ":usecase")
+    implementation project(path: ":core")
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
