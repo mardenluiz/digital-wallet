@@ -1,5 +1,6 @@
 package com.mardenluiz.wallet.core.domain;
 
+import com.mardenluiz.wallet.core.exception.InternalServerErrorException;
 import com.mardenluiz.wallet.core.exception.TransactionPinException;
 import com.mardenluiz.wallet.core.exception.enums.ErrorCodeEnum;
 
@@ -28,13 +29,13 @@ public class TransactionPin {
         this.updatedAt = updatedAt;
     }
 
-    public TransactionPin(UserEntity userEntity, String pin, Integer attempt, Boolean blocked, LocalDateTime createdAt) {
-        this.userEntity = userEntity;
-        this.pin = pin;
-        this.attempt = attempt;
-        this.blocked = blocked;
+    public TransactionPin(UserEntity userEntity, String pin) throws TransactionPinException {
+        setPin(pin);
+        this.attempt = 3;
+        this.blocked = false;
         this.createdAt = LocalDateTime.now();
     }
+
 
     private void pinIsValid(String pin) throws TransactionPinException {
         if (pin.length() != 8) {

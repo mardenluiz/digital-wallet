@@ -23,7 +23,7 @@ public class Wallet {
         this.updatedAt = updatedAt;
     }
 
-    public Wallet(BigDecimal balance, UserEntity userEntity, LocalDateTime createdAt) {
+    public Wallet(BigDecimal balance, UserEntity userEntity) {
         this.balance = balance;
         this.userEntity = userEntity;
         this.createdAt = LocalDateTime.now();

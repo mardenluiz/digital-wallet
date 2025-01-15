@@ -8,9 +8,13 @@ public enum ErrorCodeEnum {
 
     TR0002("Balance unavailable", "TR0002"),
 
-    TRP0001("Pin invalid", "TRP-001");
+    TRP0001("Pin invalid", "TRP-001"),
 
+    ON0002("", "ON0002"),
 
+    ON0003("", "ON0003"),
+
+    ON0004("", "ON0004");
 
     private String message;
     private String code;
