@@ -20,7 +20,9 @@ public enum ErrorCodeEnum {
 
     WA0001("Wallet not found", "WA-0001"),
 
-    NO0001("Error notifying user", "NO-0001");
+    NO0001("Error notifying user", "NO-0001"),
+
+    TR0004("Unauthorized transfer", "TR-0004");
 
     private String message;
     private String code;
