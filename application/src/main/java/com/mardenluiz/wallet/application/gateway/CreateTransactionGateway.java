@@ -1,8 +1,7 @@
-package com.mardenluiz.wallet.usecase;
+package com.mardenluiz.wallet.application.gateway;
 
 import com.mardenluiz.wallet.core.domain.Transaction;
 
-public interface CreateTransactionUseCase {
-
+public interface CreateTransactionGateway {
     Transaction create(Transaction transaction);
 }
