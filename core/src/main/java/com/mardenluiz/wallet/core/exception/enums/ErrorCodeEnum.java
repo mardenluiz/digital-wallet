@@ -14,7 +14,9 @@ public enum ErrorCodeEnum {
 
     ON0003("", "ON0003"),
 
-    ON0004("", "ON0004");
+    ON0004("", "ON0004"),
+
+    TR0003("Error creating transfer", "TR-0003");
 
     private String message;
     private String code;

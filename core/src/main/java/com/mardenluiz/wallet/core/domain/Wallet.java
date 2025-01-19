@@ -82,4 +82,8 @@ public class Wallet {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public void receiveTransfer(BigDecimal value) {
+        this.balance.add(value);
+    }
 }

@@ -32,7 +32,7 @@ public class CreateUserUseCaseImpl implements CreateUserUseCase {
     @Override
     public void create(UserEntity user, String pin) throws TaxNumberException, EmailException, InternalServerErrorException {
 
-        if (!taxNumberAvailableUseCase.taxNumberAvaliable(user.getTextNumber().getValue())) {
+        if (!taxNumberAvailableUseCase.taxNumberAvailable(user.getTextNumber().getValue())) {
             throw new TaxNumberException(ErrorCodeEnum.ON0002.getMessage(), ErrorCodeEnum.ON0002.getCode());
         }
 
