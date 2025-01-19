@@ -22,7 +22,9 @@ public enum ErrorCodeEnum {
 
     NO0001("Error notifying user", "NO-0001"),
 
-    TR0004("Unauthorized transfer", "TR-0004");
+    TR0004("Unauthorized transfer", "TR-0004"),
+
+    ATH("Error authentication", "ATH");
 
     private String message;
     private String code;
