@@ -16,7 +16,11 @@ public enum ErrorCodeEnum {
 
     ON0004("", "ON0004"),
 
-    TR0003("Error creating transfer", "TR-0003");
+    TR0003("Error creating transfer", "TR-0003"),
+
+    WA0001("Wallet not found", "WA-0001"),
+
+    NO0001("Error notifying user", "NO-0001");
 
     private String message;
     private String code;
